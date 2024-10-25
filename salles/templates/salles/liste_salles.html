@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des salles</title>
+</head>
+<body>
+<h1>Liste des salles de fête</h1>
+<ul>
+    {% for salle in salles %}
+        <li>{{ salle.nom }} - {{ salle.localisation }} - {{ salle.capacite }} personnes - {{ salle.prix }} €</li>
+    {% empty %}
+        <li>Aucune salle disponible pour le moment.</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
